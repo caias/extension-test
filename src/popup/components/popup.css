@@ -28,10 +28,14 @@ a{
   padding: 0 3px;
 }
 
-.user{
+.pullrequest-author{
   width: 45px;
   display: table-cell;
-  overflow: hidden;
+}
+
+.user{
+  display:inline-block;
+  font-size: 0;
   vertical-align: top;
   position: relative;
 }
@@ -44,25 +48,12 @@ a{
 
 .user .badge{
   position: absolute;
-  top: -5px;
   right: -5px;
-  background-image:url('http://stash.wemakeprice.com/s/953198910/adc717d/1/1.0/_/download/resources/com.atlassian.bitbucket.server.bitbucket-webpack-INTERNAL:icons/icon-approved.svg');
-  border: 2px solid #fff;
-  border-radius: 100%;
-  width: 12px;
-  height: 12px;
-  background: #FFFFFF 0 0;
-  background-position: -2px;
-  background-size: 16px;
-  opacity: 1;
-  transition: all 0.2s cubic-bezier(0.14, 0.01, 0.65, 1.61);
-  transition-property: opacity, transform;
-  transform: scale(1);
-  text-align: center;
-  display: none;
-  font-size: 9px;
-  line-height: 16px;
-  text-indent: -999em;
+  top: -5px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background:#fff url('http://stash.wemakeprice.com/s/953198910/adc717d/1/1.0/_/download/resources/com.atlassian.bitbucket.server.bitbucket-webpack-INTERNAL:icons/icon-approved.svg') no-repeat 0 0;
 }
 
 .pullrequest-info{
@@ -74,4 +65,8 @@ a{
   width: 100%;
   box-sizing: border-box;
   padding:10px 0 5px 45px;
+}
+
+.reviewers .user ~ .user{
+  margin-left: 10px;
 }
