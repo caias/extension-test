@@ -1,33 +1,10 @@
 'use strict';
 
-import React, { Component, Fragment } from 'react';
+import React from 'react';
+import Reviewer from './Reviewer';
 
-const Badge = () => {
-  return (
-    <span className="badge"></span>
-  );
-  
-}
-
-const Reviewer = ({props}) => {
-  const { reviewers } = props;
-  console.log(reviewers)
-  return (
-    <div className="reviewers">
-      {reviewers.map((member, index) => (
-        <span key={index} className="user">
-          <img src={`http://stash.wemakeprice.com/users/${member.user.name}/avatar.png`} alt={member.user.displayName} title={member.user.displayName} />
-          {
-            member.approved && <Badge />
-          }
-        </span>
-      ))}
-    </div>
-  )
-}
-
-const List = ({ data }) => {
-  const values = data.values;
+const List = ({ props }) => {
+  const { values } = props;
 
   return (
     <ul>
