@@ -1,8 +1,8 @@
 {
   "name": "Frontend TEAM Extension",
-  "version": "1.0",
+  "version": "1.0.5",
   "manifest_version": 2,
-  "description": "TEST",
+  "description": "여러분의 시간을 아껴드립니다.",
   "browser_action": {
     "default_icon": "icon.png",
     "default_popup": "popup.html"
@@ -10,19 +10,39 @@
   "content_scripts": [
     {
       "js": [
-        "content.js"
+        "slack.js"
       ],
       "matches": [
-        "http://stash.wemakeprice.com/projects/WONDER/repos/prerender/pull-requests?create*"
+        "http://your-site/projects/WONDER/repos/prerender/pull-requests/*/*",
+        "http://your-site/projects/TMFE/repos/*/pull-requests/*/*"
+      ]
+    },
+    {
+      "js": [
+        "pullrequest.js"
+      ],
+      "matches": [
+        "http://your-site/projects/WONDER/repos/prerender/pull-requests?create*",
+        "http://your-site/projects/TMFE/repos/*/pull-requests?create*"
       ]
     }
   ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoxzSoazs5CNkO29yGUIrHkvmurMT4DrDL2UYNRHoeT5BQb+u4lv93BXqm5dr0FKV24ao69XS/APl6K8BJGvmA6J7DkgBxrzrRK7a1lPV+R63b93RLqOFy7kSNLLRsavJjTUVMC5GjaOPeCN/7+YLbb4sQFUhcywEF8y6yi2zh5Kz97QG485eIllidGKzBkAnQGhjfjJR+0F1FVTemEgASYLcv2gpll/ogh5AbK81uMqErBpaYKxgOjWFfGDJntX2SnepY606md/I9FQL3c3Cyi2UFAFiNCzPSq5O/1/LKZaWdM6M6EeKmOAXQc7lDOSX4kss0fi80X23301xh+bEkQIDAQAB",
   "permissions": [
     "activeTab",
     "<all_urls>",
     "tabs",
     "cookies",
-    "http://stash.wemakeprice.com/projects/WONDER/repos/prerender/*"
+    "storage",
+    "http://your-site/projects/WONDER/repos/prerender/*",
+    "http://your-site/projects/TMFE/repos/front-manager/*",
+    "notifications"
   ]
 }

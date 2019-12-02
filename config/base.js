@@ -16,10 +16,11 @@ const PATH = {
 
 module.exports = {
   entry: {
-    index: resolve(__dirname, '..', 'src', 'index.js'),
-    background: resolve(PATH.BACKGROUND, 'background.js'),
-    content: resolve(PATH.CONTENT, 'content.js'),
-    popup: resolve(PATH.POPUP, 'popup.js'),
+    background: resolve(PATH.BACKGROUND, 'background.tsx'),
+    slack: resolve(PATH.CONTENT, 'slack', 'slack-util.tsx'),
+    pullrequest: resolve(PATH.CONTENT, 'pullrequest', 'pullrequest-util.tsx'),
+    floatingButton: resolve(PATH.CONTENT, 'floatingButton', 'floatingButton.tsx'),
+    popup: resolve(PATH.POPUP, 'popup.tsx'),
   },
   output: {
     filename: '[name].js',
@@ -36,6 +37,15 @@ module.exports = {
         ],
       },
       {
+        test: /\.(ts|tsx)$/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: 'ts-loader',
+          },
+        ],
+      },
+      {
         test: /\.css$/,
         use: [
           {
@@ -46,30 +56,25 @@ module.exports = {
           },
         ],
       },
-      // {
-      //   test: /\.hbs$/,
-      //   use: [
-      //     {
-      //       loader: 'handlebars-loader',
-      //       options: {
-      //         runtime: 'handlebars/runtime',
-      //         helperDirs: [],
-      //         partialDirs: [
-      //           resolve(__dirname, '..', 'src', 'templates', 'partials'),
-      //         ],
-      //       },
-      //     },
-      //   ],
-      // },
     ],
+  },
+  resolve: {
+    extensions: ['.tsx', '.ts', '.js', 'jsx'],
+    alias: {
+      'background': resolve(SRC_PATH, 'background'),
+      'content': resolve(SRC_PATH, 'content'),
+      'popup': resolve(SRC_PATH, 'popup/components'),
+      'util': resolve(SRC_PATH, 'util'),
+    }
   },
   plugins: [
     new MiniCssExtractPlugin({
       filename: '[name].css',
     }),
     new htmlWebpackPlugin({
-      template: resolve(SRC_PATH, 'index.html'),
-      filename: resolve(__dirname, '..', 'dist', 'index.html')
+      template: resolve(SRC_PATH, 'popup', 'popup.html'),
+      filename: resolve(__dirname, '..', 'dist', 'popup.html'),
+      inject: false,
     }),
   ],
 };

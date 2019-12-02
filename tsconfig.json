@@ -1,0 +1,35 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "jsx": "react",
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "module": "esnext",
+    "target": "es5",
+    "lib": [
+      "es2015", "es6", "esnext", "dom"
+    ],
+    "types": [
+      "chrome"
+    ],
+    "allowJs": true,
+    "sourceMap": true,
+    "baseUrl": ".",
+    "paths": {
+      "background/*": ["./src/background/*"],
+      "content/*": ["./src/content/*"],
+      "popup/*": ["./src/popup/components/*"],
+      "util/*": ["./src/util/*"]
+    },
+    "outDir": "dist",
+    "allowSyntheticDefaultImports": true,
+    "keyofStringsOnly": true
+  },
+  "include": [
+    "./src/**/*"
+  ],
+  "exclude": [
+    "./node_modules/**/*",
+    "./backup/"
+  ]
+}

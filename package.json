@@ -1,27 +1,37 @@
 {
   "name": "react-chrome-extension",
   "version": "1.0.0",
-  "description": "chrome extension test",
+  "description": "chrome extension Develop",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack --config ./config/development.js",
+    "dev": "NODE_ENV=development webpack",
+    "prod": "NODE_ENV=production webpack",
     "example": "nodemon ./example/server.js"
   },
-  "repository": "https://github.com/caias/extension-test.git",
-  "author": "(caias <caias1018@gmail.com>)",
-  "license": "MIT",
+  "repository": "git@github.com:caias/stash-slack-extension.git",
+  "contributors": [
+    "caias <caias1018@gmail.com>"
+  ],
+  "license": "UNLICENSED",
   "devDependencies": {
     "@babel/core": "7.6.2",
-    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-proposal-class-properties": "7.5.5",
+    "@babel/plugin-proposal-optional-chaining": "7.6.0",
+    "@babel/plugin-transform-async-to-generator": "7.5.0",
+    "@babel/plugin-transform-runtime": "7.6.2",
     "@babel/polyfill": "7.6.0",
     "@babel/preset-env": "7.6.2",
     "@babel/preset-react": "7.0.0",
+    "@types/chrome": "0.0.91",
+    "@types/html2canvas": "0.0.35",
+    "axios": "0.19.0",
     "babel-loader": "8.0.6",
     "css-loader": "3.2.0",
     "eslint": "4.18.2",
     "eslint-loader": "3.0.2",
     "express": "4.17.1",
     "html-webpack-plugin": "3.2.0",
+    "html2canvas": "1.0.0-rc.5",
     "mini-css-extract-plugin": "0.8.0",
     "nodemon": "1.19.3",
     "path": "0.12.7",
@@ -30,8 +40,20 @@
     "react-router-dom": "5.1.2",
     "rimraf": "3.0.0",
     "style-loader": "1.0.0",
+    "ts-loader": "6.2.0",
+    "typescript": "3.7.2",
     "webpack": "4.41.0",
     "webpack-cli": "3.3.9",
     "webpack-merge": "4.2.2"
+  },
+  "dependencies": {
+    "@babel/runtime": "7.6.3",
+    "@types/react": "16.9.9",
+    "@types/react-dom": "16.9.2",
+    "@webcomponents/webcomponentsjs": "2.4.0",
+    "antd": "^3.25.3",
+    "react-shadow-root": "4.1.0",
+    "socket.io-client": "2.3.0",
+    "tslint": "6.0.0-beta0"
   }
 }
