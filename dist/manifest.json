@@ -13,8 +13,8 @@
         "slack.js"
       ],
       "matches": [
-        "http://your-site/projects/WONDER/repos/prerender/pull-requests/*/*",
-        "http://your-site/projects/TMFE/repos/*/pull-requests/*/*"
+        "http://your-site/pull-requests/*/*",
+        "http://your-site/*/pull-requests/*/*"
       ]
     },
     {
@@ -22,8 +22,8 @@
         "pullrequest.js"
       ],
       "matches": [
-        "http://your-site/projects/WONDER/repos/prerender/pull-requests?create*",
-        "http://your-site/projects/TMFE/repos/*/pull-requests?create*"
+        "http://your-site/pull-requests?create*",
+        "http://your-site/pull-requests?create*"
       ]
     }
   ],
@@ -41,8 +41,8 @@
     "tabs",
     "cookies",
     "storage",
-    "http://your-site/projects/WONDER/repos/prerender/*",
-    "http://your-site/projects/TMFE/repos/front-manager/*",
+    "http://your-site/prerender/*",
+    "http://your-site/front-manager/*",
     "notifications"
   ]
 }

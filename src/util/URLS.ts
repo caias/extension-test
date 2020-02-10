@@ -1,6 +1,6 @@
 const URLS = {
   STASH: {
-    CreatePr: `http://stash.${'inpur-your-domain'}.com/projects/WONDER/repos/prerender?create`,
+    CreatePr: `http://stash.${'inpur-your-domain'}.com/`,
     PrList: `http://stash.${'inpur-your-domain'}.com/projects`,
   },
   CONFLUENCE: {
@@ -10,16 +10,16 @@ const URLS = {
     GreenDeploy: `http://green-deploy.${'inpur-your-domain'}.com/`,
   },
   JENKINS_STATIC: {
-    DEV: `http://jenkins.dev.${'inpur-your-domain'}.com/job/WONDER_STATIC/job/static-front/build`,
-    QA: `http://jenkins.qa.${'inpur-your-domain'}.com/job/WONDER/job/STATIC/job/static-front/build`,
-    STG: `http://jenkins.stg.${'inpur-your-domain'}.com/job/WONDER/job/STATIC/job/static-front/build`,
-    PROD: `http://jenkins.pre-prod.${'inpur-your-domain'}.com/job/Prod)WONDER/job/STATIC/job/static-front/`,
+    DEV: `http://jenkins.dev.${'inpur-your-domain'}.com/`,
+    QA: `http://jenkins.qa.${'inpur-your-domain'}.com/`,
+    STG: `http://jenkins.stg.${'inpur-your-domain'}.com/`,
+    PROD: `http://jenkins.pre-prod.${'inpur-your-domain'}.com/`,
   },
   JENKINS_PRERENDER: {
-    DEV: `http://jenkins.dev.${'inpur-your-domain'}.com/job/WONDER_API/job/prerender-api/build`,
-    QA: `http://jenkins.qa.${'inpur-your-domain'}.com/job/WONDER/job/API/job/nd-prerender-api/build`,
-    STG: `http://jenkins.stg.${'inpur-your-domain'}.com/job/WONDER/job/API/job/nd-prerender-api/build`,
-    PROD: `http://jenkins.pre-prod.${'inpur-your-domain'}.com/job/Prod)WONDER/job/API/job/nd-prerender-api/`,
+    DEV: `http://jenkins.dev.${'inpur-your-domain'}.com/`,
+    QA: `http://jenkins.qa.${'inpur-your-domain'}.com/`,
+    STG: `http://jenkins.stg.${'inpur-your-domain'}.com/`,
+    PROD: `http://jenkins.pre-prod.${'inpur-your-domain'}.com/`,
   },
   SWAGGER: {},
 };
