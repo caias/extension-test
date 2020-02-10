@@ -1,7 +1,7 @@
 /**
  * Slack 메세지 버튼
  *
- * @author kern86
+ * @author 이강원 (caias)
  * @since 2019.11.26 - draft
  */
 // plugins

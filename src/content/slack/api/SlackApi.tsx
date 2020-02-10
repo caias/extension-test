@@ -1,7 +1,7 @@
 /**
  * Slack 메시지 템플릿
  *
- * @author 이주영(juu0124)
+ * @author 이강원 (caias)
  * @since 2019.11.11
  * @since 2019.11.21 - 코드 리펙토링
  */

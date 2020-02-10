@@ -1,7 +1,7 @@
 /**
  * background script
  *
- * @author 이강원 (caias), 이주영(juu0124)
+ * @author 이강원 (caias)
  * @since 2019.11.05
  */
 

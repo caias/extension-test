@@ -1,6 +1,6 @@
 /**
  * 컨테이너 컴포넌트
- * @author 이주영(juu0124)
+ * @author 이강원 (caias)
  * @since 2019.11.21
  * @since 2019.11.26 - Slack 버튼 추가
  */

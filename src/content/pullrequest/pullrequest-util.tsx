@@ -2,7 +2,7 @@
  * Pull Request Helper Extension
  * wmp 프론트엔드 개발팀 전용
  *
- * @author 이강원 (caias), 이주영(juu0124)
+ * @author 이강원 (caias)
  * @since 2019.11.04
  */
 

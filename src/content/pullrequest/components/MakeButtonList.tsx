@@ -1,7 +1,7 @@
 /**
  * stash pull request page안에 리뷰어 버튼 생성
  *
- * @author 이강원 (caias), 이주영(juu0124)
+ * @author 이강원 (caias)
  * @since 2019.11.08
  */
 

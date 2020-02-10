@@ -1,7 +1,7 @@
 /**
  * stash pull request page안에 멤버이름별 버튼
  *
- * @author 이강원 (caias), 이주영(juu0124)
+ * @author 이강원 (caias)
  * @since 2019.11.08
  */
 

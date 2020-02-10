@@ -1,7 +1,7 @@
 /**
  * background script 에 필요한 Interface 정보
  *
- * @author 이주영(juu0124)
+ * @author 이강원(caias)
  * @since 2019.11.06
  */
 
